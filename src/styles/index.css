@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Theme 1: Ocean Blue (Professional, Trustworthy, Clean) - Default */
+  --color-primary: #0EA5E9; /* Sky 500 */
+  --color-secondary: #8B5CF6; /* Violet 500 */
+  --color-bg: #F1F5F9; /* Slate 100 - Slightly darker for better card contrast */
+  --color-surface: #FFFFFF;
+  --color-text: #0F172A; /* Slate 900 - Darker for better readability */
+  --color-text-secondary: #475569; /* Slate 600 */
+}
+
+[data-theme='sunset'] {
+  /* Theme 2: Sunset Orange (Warm, Energetic, Friendly) */
+  --color-primary: #F97316; /* Orange 500 */
+  --color-secondary: #EC4899; /* Pink 500 */
+  --color-bg: #FFF7ED; /* Orange 50 - Reduced saturation */
+  --color-surface: #FFFFFF;
+  --color-text: #1C1917; /* Stone 900 */
+  --color-text-secondary: #57534E; /* Stone 600 */
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
+}
+
+/* Focus states for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
+
+/* Hide scrollbar utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

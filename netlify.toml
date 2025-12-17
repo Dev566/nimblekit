@@ -1,0 +1,30 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[dev]
+  command = "npm run dev"
+  port = 5173
+
+[[redirects]]
+  from = "/r/*"
+  to = "/?r=:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.nimblekit.netlify.app/*"
+  to = "https://nimblekit.netlify.app/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.nimblekit.netlify.app/*"
+  to = "https://nimblekit.netlify.app/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
