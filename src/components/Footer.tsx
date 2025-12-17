@@ -66,10 +66,10 @@ export const Footer = () => {
           {/* Social - centered */}
           <div className="flex gap-4">
             <a
-              href="https://github.com"
+              href="https://github.com/Dev566/nimblekit"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-primary transition-colors focus-visible:outline-2 focus-visible:outline-primary"
+              className="text-gray-600 hover:text-primary transition-colors focus-visible:outline-2 focus-visible:outline-primary"
               aria-label="GitHub"
             >
               <Github className="h-5 w-5" />
